@@ -1,39 +1,74 @@
-﻿using Core.Tenant.Abstract;
+﻿using Amazon.Runtime.Internal;
+using Core.Entity.Concrete;
+using Core.Tenant.Abstract;
 using Domain.Abstract;
 using Domain.Concrete.MongoDb.Infrastructure;
 using Entity.DataTransfers.KeyGroup;
+using Entity.Tables;
 using Microsoft.Extensions.Configuration;
+using MongoDB.Driver;
+using MongoDB.Driver.Linq;
 
 namespace Domain.Concrete.MongoDb.Operations;
 
-public class MongoKeyGroupDal : BaseMongoDb,IKeyGroupDal
+public class MongoKeyGroupDal : BaseMongoDb, IKeyGroupDal
 {
     public MongoKeyGroupDal(ITenantService tenantService, IConfiguration configuration) : base(tenantService, configuration)
     {
     }
 
-    public Task<string> AddKeyGroup(AddKeyGroupDto keyGroup)
+    public async Task<string> AddKeyGroup(AddKeyGroupDto keyGroup)
     {
-        throw new NotImplementedException();
+        IMongoCollection<KeyGroup> collection = _db.GetCollection<KeyGroup>("KeyGroups");
+        var group = new KeyGroup()
+        {
+            Id = Guid.NewGuid().ToString("N"),
+            Name = keyGroup.Name,
+        };
+        await collection.InsertOneAsync(group);
+        return group.Id;
     }
 
-    public Task UpdateKeyGroyp(string keyGroupId, UpdateKeyGroupDto keyGroup)
+    public async Task UpdateKeyGroyp(string keyGroupId, UpdateKeyGroupDto keyGroup)
     {
-        throw new NotImplementedException();
+        IMongoCollection<KeyGroup> collection = _db.GetCollection<KeyGroup>("KeyGroups");
+        var birim = Builders<KeyGroup>.Filter
+            .Eq(restaurant => restaurant.Id, keyGroupId);
+        var update = Builders<KeyGroup>.Update
+            .Set(restaurant => restaurant.Name, keyGroup.Name);
+        await collection.UpdateOneAsync(birim, update);
     }
 
-    public Task DeleteKeyGroup(string keyGroupId)
+    public async Task DeleteKeyGroup(string keyGroupId)
     {
-        throw new NotImplementedException();
+        var filter = Builders<KeyGroup>.Filter
+            .Eq(r => r.Id, keyGroupId);
+        IMongoCollection<KeyGroup> collection = _db.GetCollection<KeyGroup>("KeyGroups");
+        await collection.DeleteOneAsync(filter);
     }
 
-    public Task<GetKeyGroupDto> GetKeyGroup(string keyGroupId)
+    public async Task<GetKeyGroupDto?> GetKeyGroup(string keyGroupId)
     {
-        throw new NotImplementedException();
+        var filter = Builders<KeyGroup>.Filter
+            .Eq(r => r.Id, keyGroupId);
+        IMongoCollection<KeyGroup> collection = _db.GetCollection<KeyGroup>("KeyGroups");
+       var result = await collection.Find(filter).FirstOrDefaultAsync();
+       if (result == null)
+           return null;
+       return new GetKeyGroupDto()
+       {
+           Id = result.Id,
+           Name = result.Name,
+       };
     }
 
-    public Task<List<GetKeyGroupDto>> GetKeyGroups()
+    public async Task<List<GetKeyGroupDto>> GetKeyGroups()
     {
-        throw new NotImplementedException();
+        IMongoCollection<KeyGroup> collection = _db.GetCollection<KeyGroup>("KeyGroups");
+        return collection.AsQueryable().Select(p => new GetKeyGroupDto()
+        {
+            Id = p.Id,
+            Name = p.Name,
+        }).ToList();
     }
 }
