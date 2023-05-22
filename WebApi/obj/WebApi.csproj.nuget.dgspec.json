@@ -4,14 +4,99 @@
     "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj": {
+    "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj",
-        "projectName": "WebApi",
-        "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\Business.csproj",
+        "projectName": "Business",
+        "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
-        "outputPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\obj\\",
+        "outputPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ensar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj"
+              },
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
+        "outputPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -44,14 +129,242 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
+        "outputPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ensar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "LiteDB": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "LiteDB.Async": {
+              "target": "Package",
+              "version": "[0.1.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23259.5, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
+        "outputPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ensar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
+        "outputPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ensar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\Business.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\Business.csproj"
+              },
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Core\\Core.csproj"
+              },
+              "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.0-preview.3.23177.8, )"
+              "version": "[8.0.0-preview.4.23260.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.ReDoc": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

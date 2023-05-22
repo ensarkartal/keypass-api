@@ -109,9 +109,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "LiteDB": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "LiteDB.Async": {
+              "target": "Package",
+              "version": "[0.1.6, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0-preview.4.23259.5, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
