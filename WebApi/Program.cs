@@ -23,7 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>
 {
 
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Sosyal Servis API", Version = "v1" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "KeyPass API", Version = "v1" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -101,7 +101,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json",
-            "Sosyal Servis API v1");
+            "KeyPass API v1");
         options.DefaultModelsExpandDepth(-1);
     });
     app.UseReDoc(c =>
