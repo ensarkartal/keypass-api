@@ -1,17 +1,16 @@
-using Core.Tenant.Abstract;
-using Core.Tenant.Cocnrete;
-using Domain.Abstract.App;
-using Domain.Abstract.IDentity;
-using Domain.Concrete.App.MongoDb.Operations;
-using Domain.Concrete.Identity.LiteDb.Operations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using Business.Jwt;
-using Domain.Concrete.Identity.Mongo.Operations;
+using WebApi.Business.Jwt;
+using WebApi.Core.Tenant.Abstract;
+using WebApi.Core.Tenant.Cocnrete;
+using WebApi.Domain.Abstract.App;
+using WebApi.Domain.Abstract.IDentity;
+using WebApi.Domain.Concrete.App.MongoDb.Operations;
+using WebApi.Domain.Concrete.Identity.Mongo.Operations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -74,18 +73,15 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddMediatR(configuration =>
 {
-    configuration.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.Load("Business"));
+    configuration.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.Load("WebApi"));
 });
 
-if (builder.Environment.IsDevelopment() || builder.Environment.IsStaging())
-{
-    builder.Services.AddScoped<ITenantService, DummyTenantManager>();
-}
-else if (builder.Environment.IsProduction())
-{
-    builder.Services.AddScoped<ITenantService, HttpTenantManager>();
-}
 
+builder.Services.AddScoped<ITenantService, DummyTenantManager>();
+
+
+
+//builder.Services.AddScoped<ITenantService, HttpTenantManager>();
 builder.Services.AddScoped<IAppUserDal, MongoAppUserDal>();
 
 builder.Services.AddScoped<IKeyGroupDal, MongoKeyGroupDal>();

@@ -1,8 +1,7 @@
-﻿using Core.Tenant.Abstract;
-using LiteDB.Async;
-using Microsoft.Extensions.Configuration;
+﻿using LiteDB.Async;
+using WebApi.Core.Tenant.Abstract;
 
-namespace Domain.Concrete.Identity.LiteDb.Infrastructure;
+namespace WebApi.Domain.Concrete.Identity.LiteDb.Infrastructure;
 
 public class BaseLiteDb
 {

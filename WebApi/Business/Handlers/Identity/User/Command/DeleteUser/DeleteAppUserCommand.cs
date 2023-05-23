@@ -1,7 +1,7 @@
-﻿using Domain.Abstract.IDentity;
-using MediatR;
+﻿using MediatR;
+using WebApi.Domain.Abstract.IDentity;
 
-namespace Business.Handlers.Identity.User.Command.DeleteUser;
+namespace WebApi.Business.Handlers.Identity.User.Command.DeleteUser;
 
 public class DeleteAppUserCommand : IRequest
 {

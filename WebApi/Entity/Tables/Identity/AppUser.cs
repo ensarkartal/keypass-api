@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Core.Entity.Abstract;
+using WebApi.Core.Entity.Abstract;
 
-namespace Entity.Tables.Identity;
+namespace WebApi.Entity.Tables.Identity;
 
 public class AppUser : ITable
 {

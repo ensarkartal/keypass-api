@@ -1,4 +1,4 @@
-﻿namespace Core.Entity.Abstract;
+﻿namespace WebApi.Core.Entity.Abstract;
 
 public interface ITable
 {

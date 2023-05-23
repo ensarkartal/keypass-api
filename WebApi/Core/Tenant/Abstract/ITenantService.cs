@@ -1,4 +1,4 @@
-﻿namespace Core.Tenant.Abstract;
+﻿namespace WebApi.Core.Tenant.Abstract;
 
 public interface ITenantService
 {

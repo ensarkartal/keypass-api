@@ -1,4 +1,4 @@
-﻿namespace Business.Jwt;
+﻿namespace WebApi.Business.Jwt;
 public class AccessToken : IAccessToken
 {
     public AccessToken(string token)

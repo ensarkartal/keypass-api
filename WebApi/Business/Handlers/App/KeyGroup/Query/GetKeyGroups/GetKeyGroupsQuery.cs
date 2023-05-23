@@ -1,8 +1,8 @@
-﻿using Domain.Abstract.App;
-using Entity.DataTransfers.App.KeyGroup;
-using MediatR;
+﻿using MediatR;
+using WebApi.Domain.Abstract.App;
+using WebApi.Entity.DataTransfers.App.KeyGroup;
 
-namespace Business.Handlers.App.KeyGroup.Query.GetKeyGroups;
+namespace WebApi.Business.Handlers.App.KeyGroup.Query.GetKeyGroups;
 
 public class GetKeyGroupsQuery : IRequest<List<GetKeyGroupDto>>
 {

@@ -1,6 +1,5 @@
-﻿
-using Entity.DataTransfers.App.KeyGroup;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApi.Entity.DataTransfers.App.KeyGroup;
 
 namespace WebApi.Controllers.Abstract.App;
 

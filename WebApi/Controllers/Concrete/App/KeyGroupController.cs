@@ -1,13 +1,13 @@
-﻿using Business.Handlers.App.KeyGroup.Command.AddKeyGroup;
-using Business.Handlers.App.KeyGroup.Command.DeleteKeyGroup;
-using Business.Handlers.App.KeyGroup.Command.UpdateKeyGroup;
-using Business.Handlers.App.KeyGroup.Query.GetKeyGroup;
-using Business.Handlers.App.KeyGroup.Query.GetKeyGroups;
-using Entity.DataTransfers.App.KeyGroup;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Business.Handlers.App.KeyGroup.Command.AddKeyGroup;
+using WebApi.Business.Handlers.App.KeyGroup.Command.DeleteKeyGroup;
+using WebApi.Business.Handlers.App.KeyGroup.Command.UpdateKeyGroup;
+using WebApi.Business.Handlers.App.KeyGroup.Query.GetKeyGroup;
+using WebApi.Business.Handlers.App.KeyGroup.Query.GetKeyGroups;
 using WebApi.Controllers.Abstract.App;
+using WebApi.Entity.DataTransfers.App.KeyGroup;
 
 namespace WebApi.Controllers.Concrete.App;
 

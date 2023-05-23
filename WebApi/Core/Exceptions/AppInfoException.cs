@@ -1,4 +1,4 @@
-﻿namespace Core.Exceptions;
+﻿namespace WebApi.Core.Exceptions;
 
 public class AppInfoException : Exception
 {

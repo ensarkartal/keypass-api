@@ -1,8 +1,8 @@
-﻿using Domain.Abstract.IDentity;
-using Entity.DataTransfers.Identity.AppUser;
-using MediatR;
+﻿using MediatR;
+using WebApi.Domain.Abstract.IDentity;
+using WebApi.Entity.DataTransfers.Identity.AppUser;
 
-namespace Business.Handlers.Identity.User.Command.AddAppUser;
+namespace WebApi.Business.Handlers.Identity.User.Command.AddAppUser;
 
 public class AddAppCommand :  IRequest<string>
 {

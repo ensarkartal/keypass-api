@@ -1,6 +1,6 @@
-﻿using Core.Entity.Concrete;
+﻿using WebApi.Core.Entity.Concrete;
 
-namespace Entity.Tables.App;
+namespace WebApi.Entity.Tables.App;
 
 public class KeyPassword : AggregateEntity
 {

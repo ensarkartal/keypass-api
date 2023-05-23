@@ -1,16 +1,12 @@
-﻿using Core.Security.Hashing;
-using Core.Tenant.Abstract;
-using Domain.Abstract.IDentity;
-using Domain.Concrete.Identity.LiteDb.Infrastructure;
-using Domain.Concrete.Identity.Mongo.Infrastructure;
-using Entity.DataTransfers.App.KeyGroup;
-using Entity.DataTransfers.Identity.AppUser;
-using Entity.Tables.App;
-using Entity.Tables.Identity;
-using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
+using WebApi.Core.Security.Hashing;
+using WebApi.Core.Tenant.Abstract;
+using WebApi.Domain.Abstract.IDentity;
+using WebApi.Domain.Concrete.Identity.Mongo.Infrastructure;
+using WebApi.Entity.DataTransfers.Identity.AppUser;
+using WebApi.Entity.Tables.Identity;
 
-namespace Domain.Concrete.Identity.Mongo.Operations;
+namespace WebApi.Domain.Concrete.Identity.Mongo.Operations;
 
 public class MongoAppUserDal : BaseMongoDb,IAppUserDal
 {

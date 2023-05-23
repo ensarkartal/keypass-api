@@ -1,7 +1,7 @@
-﻿using Entity.DataTransfers.Identity.AppUser;
-using Entity.Tables.Identity;
+﻿using WebApi.Entity.DataTransfers.Identity.AppUser;
+using WebApi.Entity.Tables.Identity;
 
-namespace Domain.Abstract.IDentity;
+namespace WebApi.Domain.Abstract.IDentity;
 
 public interface IAppUserDal
 {

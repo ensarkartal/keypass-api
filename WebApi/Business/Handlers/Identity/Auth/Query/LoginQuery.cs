@@ -1,10 +1,10 @@
-﻿using Business.Jwt;
-using Core.Exceptions;
-using Core.Security.Hashing;
-using Domain.Abstract.IDentity;
-using MediatR;
+﻿using MediatR;
+using WebApi.Business.Jwt;
+using WebApi.Core.Exceptions;
+using WebApi.Core.Security.Hashing;
+using WebApi.Domain.Abstract.IDentity;
 
-namespace Business.Handlers.Identity.Auth.Query;
+namespace WebApi.Business.Handlers.Identity.Auth.Query;
 
 public class LoginQuery : IRequest<AccessToken>
 {

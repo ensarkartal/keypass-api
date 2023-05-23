@@ -1,19 +1,13 @@
-﻿using Business.Handlers.App.KeyGroup.Command.AddKeyGroup;
-using Business.Handlers.App.KeyGroup.Command.DeleteKeyGroup;
-using Business.Handlers.App.KeyGroup.Command.UpdateKeyGroup;
-using Business.Handlers.App.KeyGroup.Query.GetKeyGroup;
-using Business.Handlers.App.KeyGroup.Query.GetKeyGroups;
-using Business.Handlers.Identity.Auth.Query;
-using Business.Handlers.Identity.User.Command.AddAppUser;
-using Business.Handlers.Identity.User.Command.DeleteUser;
-using Business.Handlers.Identity.User.Command.UpdateUser;
-using Business.Handlers.Identity.User.Queries.GetUser;
-using Business.Handlers.Identity.User.Queries.GetUsers;
-using Entity.DataTransfers.App.KeyGroup;
-using Entity.DataTransfers.Identity.AppUser;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Business.Handlers.Identity.Auth.Query;
+using WebApi.Business.Handlers.Identity.User.Command.AddAppUser;
+using WebApi.Business.Handlers.Identity.User.Command.DeleteUser;
+using WebApi.Business.Handlers.Identity.User.Command.UpdateUser;
+using WebApi.Business.Handlers.Identity.User.Queries.GetUser;
+using WebApi.Business.Handlers.Identity.User.Queries.GetUsers;
 using WebApi.Controllers.Abstract.Identity;
+using WebApi.Entity.DataTransfers.Identity.AppUser;
 
 namespace WebApi.Controllers.Concrete.Identity;
 

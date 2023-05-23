@@ -1,6 +1,6 @@
-﻿using Entity.DataTransfers.App.KeyGroup;
+﻿using WebApi.Entity.DataTransfers.App.KeyGroup;
 
-namespace Domain.Abstract.App;
+namespace WebApi.Domain.Abstract.App;
 
 public interface IKeyGroupDal
 {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JQqgoTkdKFsnQA7iUcnUiUplnjZ8Vr3j3BeOGPN2q2mimz3JHLFRnqx4/aE3hf74dUM7RTiSqJ7K4Tal1VgJAA==",
+  "dgSpecHash": "jsUJ9SbqVBeXbaOc7ROBPBSJmWDOzdWxJm8TG7z5O40baakjQRn0T9GH9kUx5gYcaW/CpEB/XF/jO4srK5n+Dg==",
   "success": true,
   "projectFilePath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [

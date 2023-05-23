@@ -2179,6 +2179,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "LiteDB >= 5.0.16",
       "LiteDB.Async >= 0.1.6",
       "MediatR >= 12.0.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.0-preview.4.23260.4",
@@ -2236,6 +2237,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "[5.0.16, )"
+          },
           "LiteDB.Async": {
             "target": "Package",
             "version": "[0.1.6, )"

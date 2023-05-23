@@ -1,4 +1,4 @@
-﻿namespace Entity.DataTransfers.Identity.AppUser;
+﻿namespace WebApi.Entity.DataTransfers.Identity.AppUser;
 
 public class GetAppUserDto
 {

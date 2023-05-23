@@ -1,11 +1,10 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
-using Entity.Tables.Identity;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using WebApi.Entity.Tables.Identity;
 
-namespace Business.Jwt;
+namespace WebApi.Business.Jwt;
 
 public class JwtHelper : ITokenHelper
 {

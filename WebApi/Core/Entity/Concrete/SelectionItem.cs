@@ -1,6 +1,6 @@
-﻿using Core.Entity.Abstract;
+﻿using WebApi.Core.Entity.Abstract;
 
-namespace Core.Entity.Concrete;
+namespace WebApi.Core.Entity.Concrete;
 
 /// <summary>
 /// Simple selectable lists have been created to return with a single schema through the API.

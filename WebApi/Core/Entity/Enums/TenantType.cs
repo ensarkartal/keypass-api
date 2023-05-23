@@ -1,4 +1,4 @@
-﻿namespace Core.Entity.Enums;
+﻿namespace WebApi.Core.Entity.Enums;
 
 public enum TenantType
 {

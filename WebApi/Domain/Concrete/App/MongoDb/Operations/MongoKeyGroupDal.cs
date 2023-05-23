@@ -1,14 +1,12 @@
-﻿using Core.Entity.Concrete;
-using Core.Tenant.Abstract;
-using Domain.Abstract.App;
-using Domain.Concrete.Identity.Mongo.Infrastructure;
-using Entity.DataTransfers.App.KeyGroup;
-using Entity.Tables.App;
-using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using WebApi.Core.Tenant.Abstract;
+using WebApi.Domain.Abstract.App;
+using WebApi.Domain.Concrete.Identity.Mongo.Infrastructure;
+using WebApi.Entity.DataTransfers.App.KeyGroup;
+using WebApi.Entity.Tables.App;
 
-namespace Domain.Concrete.App.MongoDb.Operations;
+namespace WebApi.Domain.Concrete.App.MongoDb.Operations;
 
 public class MongoKeyGroupDal : BaseMongoDb, IKeyGroupDal
 {

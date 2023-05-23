@@ -1,7 +1,6 @@
-﻿using Business.Handlers.Identity.Auth.Query;
-using Entity.DataTransfers.App.KeyGroup;
-using Entity.DataTransfers.Identity.AppUser;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApi.Business.Handlers.Identity.Auth.Query;
+using WebApi.Entity.DataTransfers.Identity.AppUser;
 
 namespace WebApi.Controllers.Abstract.Identity;
 

@@ -1,8 +1,7 @@
-﻿using Core.Tenant.Abstract;
-using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
+using WebApi.Core.Tenant.Abstract;
 
-namespace Domain.Concrete.Identity.Mongo.Infrastructure;
+namespace WebApi.Domain.Concrete.Identity.Mongo.Infrastructure;
 
 public class BaseMongoDb
 {

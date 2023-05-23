@@ -1,6 +1,6 @@
-﻿using Entity.Tables.Identity;
+﻿using WebApi.Entity.Tables.Identity;
 
-namespace Business.Jwt;
+namespace WebApi.Business.Jwt;
 
 public interface ITokenHelper
 {

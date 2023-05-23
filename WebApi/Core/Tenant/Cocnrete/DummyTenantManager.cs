@@ -1,6 +1,6 @@
-﻿using Core.Tenant.Abstract;
+﻿using WebApi.Core.Tenant.Abstract;
 
-namespace Core.Tenant.Cocnrete;
+namespace WebApi.Core.Tenant.Cocnrete;
 
 public class DummyTenantManager : ITenantService
 {

@@ -1,7 +1,7 @@
-﻿using Domain.Abstract.App;
-using MediatR;
+﻿using MediatR;
+using WebApi.Domain.Abstract.App;
 
-namespace Business.Handlers.App.KeyGroup.Command.DeleteKeyGroup;
+namespace WebApi.Business.Handlers.App.KeyGroup.Command.DeleteKeyGroup;
 
 public class DeleteKeyGroupCommand : IRequest
 {

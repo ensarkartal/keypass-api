@@ -1,8 +1,8 @@
-﻿using Domain.Abstract.App;
-using Entity.DataTransfers.App.KeyGroup;
-using MediatR;
+﻿using MediatR;
+using WebApi.Domain.Abstract.App;
+using WebApi.Entity.DataTransfers.App.KeyGroup;
 
-namespace Business.Handlers.App.KeyGroup.Command.UpdateKeyGroup;
+namespace WebApi.Business.Handlers.App.KeyGroup.Command.UpdateKeyGroup;
 
 public class UpdateKeyGroupCommand : IRequest
 {

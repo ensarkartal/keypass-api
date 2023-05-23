@@ -1,14 +1,11 @@
-﻿using Core.Security.Hashing;
-using Core.Tenant.Abstract;
-using Domain.Abstract.IDentity;
-using Domain.Concrete.Identity.LiteDb.Infrastructure;
-using Entity.DataTransfers.Identity.AppUser;
-using Entity.Tables.Identity;
-using LiteDB.Async;
-using Microsoft.Extensions.Configuration;
-using SharpCompress.Common;
+﻿using WebApi.Core.Security.Hashing;
+using WebApi.Core.Tenant.Abstract;
+using WebApi.Domain.Abstract.IDentity;
+using WebApi.Domain.Concrete.Identity.LiteDb.Infrastructure;
+using WebApi.Entity.DataTransfers.Identity.AppUser;
+using WebApi.Entity.Tables.Identity;
 
-namespace Domain.Concrete.Identity.LiteDb.Operations;
+namespace WebApi.Domain.Concrete.Identity.LiteDb.Operations;
 
 public class LiteDbAppUserDal : BaseLiteDb, IAppUserDal
 {

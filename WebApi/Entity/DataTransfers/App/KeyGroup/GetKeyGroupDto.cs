@@ -1,4 +1,4 @@
-﻿namespace Entity.DataTransfers.App.KeyGroup;
+﻿namespace WebApi.Entity.DataTransfers.App.KeyGroup;
 
 public class GetKeyGroupDto
 {

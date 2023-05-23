@@ -1,4 +1,4 @@
-﻿namespace Core.Entity.Concrete;
+﻿namespace WebApi.Core.Entity.Concrete;
 
 public class LookUpEntity
 {

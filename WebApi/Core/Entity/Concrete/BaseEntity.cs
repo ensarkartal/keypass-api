@@ -1,6 +1,6 @@
-﻿using Core.Entity.Abstract;
+﻿using WebApi.Core.Entity.Abstract;
 
-namespace Core.Entity.Concrete;
+namespace WebApi.Core.Entity.Concrete;
 
 public class BaseEntity : ITable
 {
