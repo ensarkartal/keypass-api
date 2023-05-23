@@ -10,16 +10,17 @@ namespace WebApi.Domain.Concrete.Identity.Mongo.Operations;
 
 public class MongoAppUserDal : BaseMongoDb,IAppUserDal
 {
+    private IMongoCollection<AppUser> _appUsercollection;
     public MongoAppUserDal(ITenantService tenantService, IConfiguration configuration) : base(tenantService, configuration)
     {
+        _appUsercollection = _db.GetCollection<AppUser>("AppUsers");
     }
 
     public async Task<AppUser?> GetUser(string? userName)
     {
         var filter = Builders<AppUser>.Filter
             .Eq(r => r.Email, userName);
-        IMongoCollection<AppUser> collection = _db.GetCollection<AppUser>("AppUsers");
-        var result = await collection.Find(filter).FirstOrDefaultAsync();
+        var result = await _appUsercollection.Find(filter).FirstOrDefaultAsync();
         if (result == null)
             return null;
         return result;
@@ -27,7 +28,6 @@ public class MongoAppUserDal : BaseMongoDb,IAppUserDal
 
     public async Task<string> AddUSer(AddAppUserDto? user)
     {
-        IMongoCollection<AppUser> collection = _db.GetCollection<AppUser>("AppUsers");
         AppUser appUser = new();
         appUser.Id = Guid.NewGuid().ToString("N");
         HashingHelper.CreatePasswordHash(user.Password, out var passwordHash, out var passwordSalt);
@@ -36,36 +36,33 @@ public class MongoAppUserDal : BaseMongoDb,IAppUserDal
         appUser.Email = user.Email;
         appUser.FullName = user.FullName;
         appUser.PhoneNumber = user.PhoneNumber;
-        await collection.InsertOneAsync(appUser);
+        await _appUsercollection.InsertOneAsync(appUser);
         return appUser.Id;
     }
 
     public async Task UpdateUSer(string? id, UpdateAppUserDto? user)
     {
-        IMongoCollection<AppUser> collection = _db.GetCollection<AppUser>("AppUsers");
         var birim = Builders<AppUser>.Filter
             .Eq(restaurant => restaurant.Id, id);
         var update = Builders<AppUser>.Update
             .Set(restaurant => restaurant.Email, user.Email)
             .Set(restaurant => restaurant.FullName, user.FullName)
             .Set(restaurant => restaurant.PhoneNumber, user.MobilePhones);
-        await collection.UpdateOneAsync(birim, update);
+        await _appUsercollection.UpdateOneAsync(birim, update);
     }
 
     public async Task DeleteUSer(string? appUserId)
     {
         var filter = Builders<AppUser>.Filter
             .Eq(r => r.Id, appUserId);
-        IMongoCollection<AppUser> collection = _db.GetCollection<AppUser>("AppUsers");
-        await collection.DeleteOneAsync(filter);
+        await _appUsercollection.DeleteOneAsync(filter);
     }
 
     public async Task<GetAppUserDto> GetAppUser(string? appUserId)
     {
         var filter = Builders<AppUser>.Filter
             .Eq(r => r.Id, appUserId);
-        IMongoCollection<AppUser> collection = _db.GetCollection<AppUser>("AppUsers");
-        var result = await collection.Find(filter).FirstOrDefaultAsync();
+        var result = await _appUsercollection.Find(filter).FirstOrDefaultAsync();
         if (result == null)
             return null;
         return new GetAppUserDto()
@@ -78,8 +75,7 @@ public class MongoAppUserDal : BaseMongoDb,IAppUserDal
 
     public async Task<List<GetAppUserDto>> GetAppUsers()
     {
-        IMongoCollection<AppUser> collection = _db.GetCollection<AppUser>("AppUsers");
-        var result = await IAsyncCursorSourceExtensions.ToListAsync(collection.AsQueryable());
+        var result = await IAsyncCursorSourceExtensions.ToListAsync(_appUsercollection.AsQueryable());
         return result.Select(p => new GetAppUserDto()
         {
             Id = p.Id,
