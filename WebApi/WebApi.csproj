@@ -21,14 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj" />
-    <ProjectReference Include="..\Core\Core.csproj" />
-    <ProjectReference Include="..\Domain\Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Controllers\Abstract\Identity\" />
     <Folder Include="Controllers\Concrete\Identity\" />
+    <Folder Include="Shared\" />
   </ItemGroup>
 
 </Project>
