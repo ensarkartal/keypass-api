@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aEry0vmtUdMxxDyDxgIDgdFejnsBKsD4iPA2kFRM67OQ3wT3XdZKzUkZuSx00vcxTOn+sWx5S9bsgTXIlfDaxA==",
+  "dgSpecHash": "y/FtDG0c47J/gfxx7MLf+1ilu0z2zmLCuQpD0QdQID8OVB57Ch0qYn6ft7iVhtX/7f9vXBY/6YK0Jo2Ier91Lg==",
   "success": true,
   "projectFilePath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Entity\\Entity.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.0-preview.4.23260.4\\microsoft.aspnetcore.metadata.8.0.0-preview.4.23260.4.nupkg.sha512"
+  ],
   "logs": []
 }

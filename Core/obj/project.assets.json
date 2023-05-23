@@ -1,11 +1,47 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Microsoft.AspNetCore.Metadata/8.0.0-preview.4.23260.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.AspNetCore.Metadata/8.0.0-preview.4.23260.4": {
+      "sha512": "cUr/SHnsx7dmkkAeVTTtQ8H7xF2/oTssjgkxXs5aVIHvn7Dz1Lr9mUSfN7wktte2C/zBfGpmQVtbVkMwW7b+Sg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/8.0.0-preview.4.23260.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net462/Microsoft.AspNetCore.Metadata.xml",
+        "lib/net8.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.8.0.0-preview.4.23260.4.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Microsoft.AspNetCore.Metadata >= 8.0.0-preview.4.23260.4"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ensar\\.nuget\\packages\\": {},
@@ -51,6 +87,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": {
+            "target": "Package",
+            "version": "[8.0.0-preview.4.23260.4, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

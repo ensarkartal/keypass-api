@@ -5,11 +5,13 @@ using Business.Handlers.App.KeyGroup.Query.GetKeyGroup;
 using Business.Handlers.App.KeyGroup.Query.GetKeyGroups;
 using Entity.DataTransfers.App.KeyGroup;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Controllers.Abstract.App;
 
 namespace WebApi.Controllers.Concrete.App;
 
+[Authorize]
 [ApiController]
 [Route("api/v{version:apiVersion}/[controller]")]
 public class KeyGroupController : ControllerBase, IKeyGroupController

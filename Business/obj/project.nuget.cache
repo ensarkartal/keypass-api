@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rEgfVDk1ACPTMo1lbnovtqX7XeZbkhK0zBbNlP1Dim2n/d3xK4CjFM4InmN9rWZ4AAa2NJG8kejHu5Vx44jazg==",
+  "dgSpecHash": "2OMTpLCCfokGSKHlgTrv2wQ9cxOTRzyVgkSy/x3fxezNH6FhjhUN6LBuj/rJGJR4PtCG3HT9y1M1SugpH4NJzg==",
   "success": true,
   "projectFilePath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\Business\\Business.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.0-preview.4.23260.4\\microsoft.aspnetcore.metadata.8.0.0-preview.4.23260.4.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

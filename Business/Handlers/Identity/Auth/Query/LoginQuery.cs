@@ -27,10 +27,10 @@ class LoginQueryHandler: IRequestHandler<LoginQuery,AccessToken>
     {
        var result = await _appUserDal.GetUser(request.Email);
        if (result == null)
-           throw new DevNetUnauthorizedException("Kullanıcıadı veya Şifre Yanlış");
+           throw new AppUnauthorizedException("Kullanıcıadı veya Şifre Yanlış");
        if (!HashingHelper.VerifyPasswordHash(request.Password, result.PasswordHash, result.PasswordSalt))
        {
-           throw new DevNetUnauthorizedException("Kullanıcıadı veya Şifre Yanlış");
+           throw new AppUnauthorizedException("Kullanıcıadı veya Şifre Yanlış");
        }
        var accessToken = _tokenHelper.CreateToken<AccessToken>(result);
        return accessToken;

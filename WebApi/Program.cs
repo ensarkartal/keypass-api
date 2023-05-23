@@ -50,6 +50,7 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 
+
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(options =>
 {
@@ -76,13 +77,22 @@ builder.Services.AddMediatR(configuration =>
     configuration.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.Load("Business"));
 });
 
-
-builder.Services.AddScoped<ITenantService, DummyTenantManager>();
+if (builder.Environment.IsDevelopment() || builder.Environment.IsStaging())
+{
+    builder.Services.AddScoped<ITenantService, DummyTenantManager>();
+}
+else if (builder.Environment.IsProduction())
+{
+    builder.Services.AddScoped<ITenantService, HttpTenantManager>();
+}
 
 builder.Services.AddScoped<IAppUserDal, MongoAppUserDal>();
 
 builder.Services.AddScoped<IKeyGroupDal, MongoKeyGroupDal>();
 builder.Services.AddScoped<ITokenHelper, JwtHelper>();
+
+
+
 
 
 builder.Services.AddApiVersioning(config =>

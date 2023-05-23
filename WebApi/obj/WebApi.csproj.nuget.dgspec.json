@@ -129,6 +129,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Metadata": {
+              "target": "Package",
+              "version": "[8.0.0-preview.4.23260.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

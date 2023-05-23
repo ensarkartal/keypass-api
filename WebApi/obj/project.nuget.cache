@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9Eq4reJKS3Xfvy9CISKoI80JcXk/Zci+eREs8uB31rj+klPE3JOL6bIinYhjWlrmgzSvn3t1sAR82r54Zqi8Gw==",
+  "dgSpecHash": "oyL0p0cvVGwVZexXHfPMYnYqYLC5qEYfV6/YLFQSgeUWHFAmqk8f744nH7/ppTwiI3O6O9orzNg75cpUQCjbSg==",
   "success": true,
   "projectFilePath": "C:\\devops\\keypass\\src\\backend\\keypass-api\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.0-preview.4.23260.4\\microsoft.aspnetcore.metadata.8.0.0-preview.4.23260.4.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0-preview.4.23260.4\\microsoft.aspnetcore.openapi.8.0.0-preview.4.23260.4.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
