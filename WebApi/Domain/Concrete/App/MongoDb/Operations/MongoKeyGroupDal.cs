@@ -1,5 +1,4 @@
-﻿using Amazon.Runtime.Internal;
-using Core.Entity.Concrete;
+﻿using Core.Entity.Concrete;
 using Core.Tenant.Abstract;
 using Domain.Abstract.App;
 using Domain.Concrete.Identity.Mongo.Infrastructure;
